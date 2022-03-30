@@ -1,7 +1,11 @@
 const RhymeButton = (props) => {
 
+    const {datamuseRequest, getDatamuseRhymeUrl, rhyme, inputWords} = props;
     return (
-        <button onClick={props.rhyme} type="button" className="btn btn-primary">Show rhyming words</button>
+        <button type="button" className="btn btn-primary"
+        onClick={()=>datamuseRequest(getDatamuseRhymeUrl(inputWords),rhyme)}>
+            Show rhyming words
+        </button>
     )
 };
 
